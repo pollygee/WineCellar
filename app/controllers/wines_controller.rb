@@ -18,4 +18,8 @@ class WinesController < ApplicationController
 
     render json: wines
   end
+
+  def new
+
+  end
 end
