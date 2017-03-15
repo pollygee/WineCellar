@@ -13,7 +13,7 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'better_errors'
-  gem 'did_you_mean'
+  # gem 'did_you_mean'
   gem 'binding_of_caller'
 end
 
