@@ -1,7 +1,5 @@
 class WinesController < ApplicationController
   def index
-    # @wines = Wine.all
-
     filter_params = params.permit :name, :vintage, :country, :region, :color
 
     wines = Wine.where(filter_params.to_h)
@@ -16,7 +14,7 @@ class WinesController < ApplicationController
       wines = wines.where("vintage >= ?", after_year)
     end
 
-    render json: wines
+    @wines = wines
   end
 
   def new
