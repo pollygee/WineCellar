@@ -1,0 +1,6 @@
+<h2>Upload a CSV file of wines<h2>
+
+<%= form_tag import_wines_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>

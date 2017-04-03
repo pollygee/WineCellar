@@ -18,6 +18,10 @@ class WinesController < ApplicationController
   end
 
   def new
+  end
 
+  def import
+    Wine.import(params[:file])
+    redirect_to root_url, notice: "Wines imported."
   end
 end
